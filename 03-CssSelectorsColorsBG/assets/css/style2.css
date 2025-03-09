@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content {
+    width: 70%;
+    margin: 20px auto;
+    border: 5px solid black;
+    padding: 20px;
+    position: relative;
+    height: 400px;
+    overflow: auto; 
+ 
+}
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 310px; 
+    height: 212px; 
+    background-image: url('./image/tree.png'); 
+    background-size: cover; 
+     
+}
+
+.content p, .content h1 {
+    font-weight: bold;
+    color: yellow;
+    position: relative;
+    
+}
+
+.content h1 {
+    text-align: center;
+}
+
+
