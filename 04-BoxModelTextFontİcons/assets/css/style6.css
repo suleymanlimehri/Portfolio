@@ -1,0 +1,42 @@
+.head1{
+    border: 5px solid;
+    border-image: linear-gradient(to right, rgb(25, 104, 18), rgb(90, 200, 90), rgb(142, 214, 128)) 1;
+    padding: 20px;
+    width: 300px;
+    height: 100px;   
+}
+.name1{
+    margin-top: 30px;
+}
+.head2{
+    width: 250px;
+    margin-bottom: 30px;
+    border: 5px solid;
+    border-left: 0;
+    border-right: 0;
+    border-image: linear-gradient(to right, rgb(66, 234, 223), rgb(16, 202, 140), rgb(50, 233, 172)) 1;
+    padding: 40px;
+}
+.top{
+    display: flex;
+    gap: 50px;
+}
+.bottom{
+    display: flex;
+    gap: 50px;
+}
+.head3{
+    width: 250px;
+    border: 5px solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(to right, rgb(66, 234, 223), rgb(16, 202, 140), rgb(50, 233, 172)) 1;
+    padding: 40px;
+}
+
+.head4{
+    width: 250px;
+    border: 5px solid;
+    border-image: linear-gradient(to right, rgb(25, 104, 18), rgb(90, 200, 90), rgb(142, 214, 128)) 1 ;
+    padding: 40px;
+}

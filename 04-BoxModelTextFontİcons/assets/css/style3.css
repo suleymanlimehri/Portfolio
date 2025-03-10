@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "font1";
+    src: url("../fonts/IMFellFrenchCanonSC-Regular.ttf") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "font2";
+    src: url("../fonts/PinyonScript-Regular.ttf") format("woff2");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  div.top {
+    font-size: 70px;
+    width: 900px;
+    height: 600px;
+    background-image: url("https://avatars.mds.yandex.net/i?id=97ba746b44d2cc52ec5fb11cc82336e0_l-5332718-images-thumbs&ref=rim&n=13&w=1780&h=890");
+    justify-content: center;
+    margin: auto;
+  }
+  
+  span {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .esas1 {
+    font-family: font1;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: rgb(153, 109, 59);
+  }
+  
+  .esas2 {
+    font-family: font2;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 200px;
+  }
+  
+  .esas1-small {
+    font-family: font1;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 8px;
+    padding: 10px;
+  }
+  
+  .esas2-small {
+    font-family: font2;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: 40px;
+    color: rgb(153, 109, 59);
+  }
+  
+  div.bottom {
+    width: 900px;
+    height: 50px;
+    background-image: url("https://i.pinimg.com/736x/4d/12/62/4d12628a0fb3ba009958ffa2b9eb9c1b.jpg");
+    justify-content: center;
+    margin: auto;
+  }
+  
+  p {
+    color: white;
+    font-family: font1;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 5px;
+    padding: 10px;
+    text-align: center;
+  }

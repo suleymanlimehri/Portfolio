@@ -1,0 +1,51 @@
+.name1{
+    background-color: aquamarine;
+    border-radius: 90px;
+    border: 3px solid red;
+    width: 370px;
+    height: 180px;
+}
+.div1{
+    margin: 52px 70px 50px 60px;
+
+}
+.name2{
+    background-color: coral;
+    border-radius: 25% 10%;
+    border: 3px solid red;
+    width: 370px;
+    height: 180px;
+}
+.div2{
+    margin: 52px 70px 50px 60px;
+}
+.top{
+    display: flex;
+    gap: 50px;
+}
+.name3{
+    background-color: rgb(40, 241, 255);
+    border-radius: 35px 10em 10%;
+    border: 3px solid red;
+    width: 370px;
+    height: 180px;
+    margin-top: 50px;
+}
+.div3{
+    margin: 52px 70px 50px 60px;
+}
+.name4{
+    background-color: rgb(170, 181, 181);
+    border-radius: 50px 50% 50cm 50em;
+    border: 3px solid red;
+    width: 370px;
+    height: 180px;
+    margin-top: 50px;
+}
+.div4{
+    margin: 52px 70px 50px 60px;
+}
+.bottom{
+    display: flex;
+    gap: 50px;
+}
