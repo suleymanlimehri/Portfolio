@@ -1,0 +1,305 @@
+
+#nav{
+    background-color: #2C3E50;
+    height: 10.4rem;
+}
+.nav-first{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+.nav-last .nav-unorder{
+    display: flex;
+    gap: 2rem;
+
+}
+.nav-last{
+    text-transform: uppercase;
+}
+.nav-last .nav-undorder li{
+    font-size:2rem;
+    text-transform: uppercase; 
+}
+
+.esas{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ortaya gətirir */
+    gap: 60rem; /* Aralarındakı boşluğu tənzimləyir */
+    height: 100%; /* Header-in tam hündürlüyü olsun deyə */
+}
+.link {
+    color: white;
+}
+.container{
+    margin: 0 auto;
+    max-width: 132rem;
+}
+#main{
+    background-color:#1ABC9C ;
+    height: 55rem;
+}
+.main_image .image{
+    width: 24rem;
+    height: 26rem;
+}
+.main_image{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+    color: white;
+
+}
+#main{
+    height: 55rem;
+}
+.main_text{
+    font-size: 5.4rem;
+    text-transform: uppercase;
+}
+#main.icon{
+    display: flex;
+    gap: 1rem;
+}
+#main.iconline{
+    width: 11.2rem;
+    height: 0.3rem;
+    border: 0.1rem;
+    background-color: white;
+}
+.text{
+    font-size: 2.4rem;
+}
+.icon-color{
+    color: black;
+
+}
+#portofolio{
+    padding: 3.4rem;
+}
+.Port{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+#portofolio .iconline{
+    width: 11.2rem;
+    height: 0.3rem;
+    border: 0.1rem;
+    background-color: rgb(0, 0, 0);
+}
+
+#portofolio .icon{
+    display: flex;
+    gap: 1rem;
+}
+.menu-list{
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.menu-list .menu{
+    width: 35rem;
+    height: 30rem;
+    border-radius: 3px;
+}
+.menu  img{
+    border-radius: 1rem;
+}
+/* ABOUT */
+
+#about{
+    height: 60rem;
+    background-color: #1ab99a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.about-first {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+#about .beyaz-icon {
+    display: flex;
+    gap: 1rem;
+  }
+  
+#about .beyaz-iconline {
+    width: 11.2rem;
+    height: 0.4rem;
+    border-radius: 3rem;
+    background-color: white;
+  }
+  
+#about p {
+    font-size: 2rem;
+  }
+.title{
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  
+#about .metn {
+    width: 85rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 7rem;
+  }
+  
+.head {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+.button {
+    width: 20rem;
+    height: 5.5rem;
+    border: 0.2rem solid white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+.button:hover {
+    background-color: white;
+    color: #1a252f;
+  }
+  
+.button i {
+    font-size: 2rem;
+    color: white;
+  }
+  
+p {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+  }
+  
+.button:hover p {
+    color: #1a252f;
+  }
+  /*Input*/
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+} 
+#contact .iconline{
+    width: 11.2rem;
+    height: 0.3rem;
+    border: 0.1rem;
+    background-color: rgb(0, 0, 0);
+}
+
+#contact .icon{
+    display: flex;
+    gap: 1rem;
+}
+.form {
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.input, textarea {
+    width: 100%; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    margin-bottom: 20px;
+}
+.submit{
+    margin-left: 320px;
+}
+
+  /*Footer*/
+.footer-name{
+    display: flex;
+    height: 40px;
+    background-color: #2C3E50;
+    height: 200px;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 20px;
+}
+.footer-first{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.favicon{
+    border: 1px solid white;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.around,.footer,.about-free{
+    text-align: center;
+ 
+}
+.about-free{
+    margin-right: 20px;
+}
+.footer-first-test{
+    width: 170px;
+    height: 40px;
+    color: white;
+}
+.about-first-test{
+    width: 295px;
+    height: 40px;
+    color: white;
+}
+.footer{
+    margin-left: 100px;
+    
+}
+
+.copy{
+    background-color: black;
+}
+
+.copy h5{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}

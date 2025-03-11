@@ -15,12 +15,14 @@
     border: 3px solid red;
     width: 370px;
     height: 180px;
+    vertical-align: top;
+    display: inline-block;
+    padding: 20px;
+    border-bottom: 20px;
+    margin:57px 138px 69px 476px;
 }
-.div2{
-    margin: 52px 70px 50px 60px;
-}
+
 .top{
-    display: flex;
     gap: 50px;
 }
 .name3{
