@@ -25,9 +25,9 @@
 .esas{
     display: flex;
     align-items: center;
-    justify-content: center; /* Ortaya gətirir */
-    gap: 60rem; /* Aralarındakı boşluğu tənzimləyir */
-    height: 100%; /* Header-in tam hündürlüyü olsun deyə */
+    justify-content: center; 
+    gap: 60rem; 
+    height: 100%; 
 }
 .link {
     color: white;
