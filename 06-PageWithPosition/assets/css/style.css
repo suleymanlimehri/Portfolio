@@ -107,6 +107,15 @@ li{
     cursor: pointer;
     border: 1px solid rgb(94, 94, 94);
 }
+.sale-badge{
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 50px;
+}
+.card-span{
+    position: relative;
+}
 .color-black{
     background-color: black;
 }
@@ -186,18 +195,31 @@ li{
     justify-content: space-between;
     gap: 5;
 }
-.footer{
+.text{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.footer-1{
+.text-1{
     border-radius: 50%;
     border: 2px solid;
     width: 20px;
     height: 20px;
 }
-.footer p{
+.text p{
     text-align: center;
 
+}
+.text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text-1, .text-2 {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
 }
