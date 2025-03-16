@@ -1,0 +1,625 @@
+after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+}
+#navbar_area{
+    background-color: rgb(245, 244, 244);
+    width: 100%;
+    height: 110px;
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .nav{
+        align-items: center;
+        display: flex;
+        justify-content:space-between;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    ul .home{
+        color: gray;
+    }
+    .burger{
+        display: none;
+    }
+}
+#main_area{
+    padding: 60px 20px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cards{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.aside_bar {
+    flex: 1 1 60%;
+    position: relative;
+    height: 500px;
+}
+.aside_bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content1 {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content1 h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    
+}
+
+.content1 p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buton {
+    background: transparent;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    width: fit-content;
+    border-radius: 2px;  
+    border: 1px solid;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+    
+}
+
+.card_area {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 35%;
+    gap: 10px;
+}
+
+.card {
+    flex: 1 1 48%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+.text p {
+    font-size: 16px;
+}
+}
+#men{
+    .container{
+        max-width: 1200px;
+        margin: 80px auto;
+    }
+    p{
+        opacity: 0.8;
+        font-size: 20px;
+        font-style: italic;
+    }
+    .card_list{
+        padding: 40px 0;
+        display: flex;
+        gap: 40px;
+    }
+    h1{
+        padding: 1px 0;
+        font-size: 50px;
+    }
+    .mix{
+        display: flex;
+        gap:100px;
+    }
+    .content{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+        p{
+        opacity: 0.8;
+        font-size: 20px;
+    }
+    }
+ 
+    h4{
+        font-size: 25px;
+    }
+}
+#women{
+    .container{
+        max-width: 1200px;
+        margin: 80px auto;
+    }
+    p{
+        opacity: 0.8;
+        font-size: 20px;
+        font-style: italic;
+    }
+    .card_list{
+        padding: 40px 0;
+        display: flex;
+        gap: 40px;
+    }
+    h1{
+        padding: 1px 0;
+        font-size: 50px;
+    }
+    .mix{
+        display: flex;
+        gap:100px;
+    }
+    .content{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+        p{
+        opacity: 0.8;
+        font-size: 20px;
+    }
+    }
+ 
+    h4{
+        font-size: 25px;
+    }
+}
+#kids{
+    .container{
+        max-width: 1200px;
+        margin: 80px auto;
+    }
+    p{
+        opacity: 0.8;
+        font-size: 20px;
+        font-style: italic;
+    }
+    .card_list{
+        padding: 40px 0;
+        display: flex;
+        gap: 40px;
+    }
+    h1{
+        padding: 1px 0;
+        font-size: 50px;
+    }
+    .mix{
+        display: flex;
+        gap:100px;
+    }
+    .content{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+        p{
+        opacity: 0.8;
+        font-size: 20px;
+    }
+    }
+ 
+    h4{
+        font-size: 25px;
+    }
+}
+#product{
+    .container{
+        width: 1000px;
+        margin-left: 70px;
+        h1{
+        font-size: 40px;
+        }
+       span{
+        font-size: 40px;
+       }
+       b{
+        font-size: 15px;
+       }
+       p{
+        a{
+            color: blue;
+        }
+        text-align: justify;
+        font-size: 16px;
+        margin-top: 30px;
+        opacity: 0.7;
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       }
+    .btn{
+        padding: 10px;
+        height: 40px;
+        margin-top: 40px;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+       } 
+       
+    }
+    .row{
+        display: flex;
+        gap: 40px;
+    }
+    .product_card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 0 140px;
+        img{
+        width: 200px;
+        height: 200px;
+        
+    }
+    .square{
+        display: flex;
+        gap: 20px;
+    }
+    .solid{
+        display: flex;
+        gap:20px
+    }
+    .left{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(224, 224, 224);
+        text-align: center;
+        padding: 80px 0;
+        color: rgb(0, 0, 0);
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        p{
+            margin-top: 5px;
+            opacity: 0.7;
+            font-style: italic;
+
+        }
+    }
+    }
+}
+#social_area{
+    .social{
+        margin-left: 70px;
+        margin-top: 150px;
+        h1{
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        p{
+            font-size: 18px;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .social_cards{
+           padding: 60px 100px;
+        }
+    }
+}
+#form_area{
+   .row{
+    padding: 80px 70px;
+    display: flex;
+    gap: 40px;
+   }
+   .form_info{
+    display: flex;
+    gap: 70px;
+    margin-left: 60px;
+    .store{
+        h4{
+            margin-top: 10px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        p{
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+        }
+    }
+    .work{
+        h4{
+            margin-top: 10px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        p{
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+    }
+   
+.container{
+    h1{
+        font-size: 40px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    p{
+        font-size: 18px;
+        margin-top: 10px;
+        opacity: 0.7;
+        font-style: italic;
+    }
+    .form{
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+        input[type=text]{
+            padding: 10px 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 17px;
+        }
+        input[type=email]{
+            padding: 10px 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 17px;
+        }
+        i{
+            font-size: 40px;
+        }
+    }
+}}  
+#footer_area{
+    height: 490px;
+    background-color: black;
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 300px;
+    }
+    .footer{
+        display: flex;
+        gap: 140px;
+        align-items: center;
+        color: white;
+         a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-size: 18px;
+            margin-top: 10px;
+
+        }
+        h4{
+            font-size: 20px;
+        }
+        .h4{
+            margin-bottom: 30px;
+        }
+        img{
+            color: rgb(255, 255, 255);
+        }
+    }
+    .son{
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        p{
+            line-height: 35px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(165, 222, 236);
+        }
+        .icon{
+            font-size:30px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+    }
+}
+@media screen and (max-width:992px){
+    #navbar_area .respo ul {
+        display: none; 
+    } 
+    #navbar_area .burger {
+        display: block;
+    }
+     .nav{
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+    #main_area .container{
+        width: 100%;
+        flex-direction: column;
+        .card_area{
+            flex-direction: column;
+        }
+        .card img{
+            height: 700px;}}
+    #men{
+        width: 100%;
+        h1,p{
+            text-align: center;
+        }
+    .card_list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ }}
+#women{
+    width: 100%;
+    h1,p{
+        text-align: center;
+    }
+.card_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}}
+#kids{
+    width: 100%;
+    h1,p{
+        text-align: center;
+    }
+.card_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}}
+#product{
+    width: 100%;
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container{
+        text-align: center;
+        width: 500px;
+    }
+    .product_card{
+        display: flex;
+        flex-direction: column;
+    }
+    .square{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 500px;
+            height: 500px;
+        }
+        .left{
+            width: 100%;
+            height: 100%;}}
+    .solid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 500px;
+            height: 500px;
+        }
+        .left{
+            width: 100%;
+            height: 100%; }}}
+#social_area{
+    width: 100%;
+    .social{
+        text-align: center;
+        .social_cards{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}
+#form_area{
+    width: 100%;
+    .row{
+        display: flex;
+        flex-direction: column;
+        .form{
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            input[type=text]{
+                width: 100%;
+                height: 100%;
+            }
+            input[type=email]{
+                width: 100%;
+                height: 100%;
+            }
+            p{
+                text-align: center;
+            }}}}
+#footer_area{
+    height: 700px;
+    width: 100%;
+    .footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:1px;
+        align-items: baseline;
+        padding: 30px 0;
+        a{
+            margin-top: 10px;
+        }
+        h4{
+            margin-top: 20px;
+        }}
+        .son{
+            width: 100%;
+            align-items: end;
+            .icon{
+                display: block;
+            }
+        }
+ 
+    }       
+}
