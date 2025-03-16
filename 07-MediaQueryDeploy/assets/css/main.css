@@ -1,4 +1,4 @@
-after {
+*, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -323,6 +323,13 @@ html, body {
 #social_area .social {
   margin-left: 70px;
   margin-top: 150px;
+}
+#social_area .social .sosial_card {
+  display: flex;
+}
+#social_area .social .sosial_card img {
+  width: 100px;
+  height: 100px;
 }
 #social_area .social h1 {
   font-size: 40px;

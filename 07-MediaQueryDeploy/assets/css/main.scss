@@ -1,4 +1,4 @@
-after{
+*,::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -342,6 +342,14 @@ html,body{
     .social{
         margin-left: 70px;
         margin-top: 150px;
+        .sosial_card{
+            display: flex;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+        }
         h1{
             font-size: 40px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

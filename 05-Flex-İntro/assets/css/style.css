@@ -267,10 +267,13 @@ textarea {
 }
 
 .favicon{
+    color: white;
     border: 1px solid white;
     display: inline-block;
-    border-radius: 10px;
-    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 10px;
 }
 .around,.footer,.about-free{
     text-align: center;
