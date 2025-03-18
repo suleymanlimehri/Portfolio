@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#Testimonials{
+    background-image: url(https://raw.githubusercontent.com/ColorlibHQ/illdy/refs/heads/master/layout/images/testiomnials-background.jpg);
+    background-size: cover;
+    min-height: 500px;
+}

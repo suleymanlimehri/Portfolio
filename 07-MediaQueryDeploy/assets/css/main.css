@@ -13,29 +13,35 @@ html, body {
   width: 100%;
   height: 110px;
 }
-#navbar_area .container {
+
+.container {
   max-width: 1200px;
   margin: 0 auto;
   height: 100%;
 }
-#navbar_area .nav {
+
+.navbar {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-#navbar_area ul {
+
+.nav-links ul {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-#navbar_area a {
+
+.nav-links a {
   text-decoration: none;
   color: black;
 }
-#navbar_area ul .home {
+
+.nav-links .active-link a {
   color: gray;
 }
-#navbar_area .burger {
+
+.menu-icon {
   display: none;
 }
 
@@ -456,10 +462,10 @@ html, body {
     max-width: 100%;
     padding: 0 15px;
   }
-  #navbar_area .respo {
+  #navbar_area .nav-links {
     display: none;
   }
-  #navbar_area .burger {
+  #navbar_area .menu-icon {
     display: block;
   }
   #main_area .container {
