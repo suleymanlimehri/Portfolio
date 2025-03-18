@@ -5,7 +5,7 @@
 }
 
 html, body {
-  width: 100%;
+  max-width: 100%;
 }
 
 #navbar_area {
@@ -18,7 +18,7 @@ html, body {
   margin: 0 auto;
   height: 100%;
 }
-#navbar_area .nav {
+#navbar_area .navbar {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ html, body {
   text-decoration: none;
   color: black;
 }
-#navbar_area ul .home {
+#navbar_area ul .list-link {
   color: gray;
 }
 #navbar_area .burger {
@@ -51,18 +51,18 @@ html, body {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-#main_area .aside_bar {
+#main_area .left {
   flex: 1 1 60%;
   position: relative;
   height: 500px;
 }
-#main_area .aside_bar img {
+#main_area .left img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main_area .content1 {
+#main_area .content {
   position: absolute;
   top: 0;
   left: 60px;
@@ -74,7 +74,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
 }
-#main_area .content1 h1 {
+#main_area .content h1 {
   font-size: 55px;
   margin-bottom: 10px;
 }
@@ -83,7 +83,7 @@ html, body {
   font-size: 18px;
   margin-bottom: 20px;
 }
-#main_area .buton {
+#main_area .btn {
   background: transparent;
   color: white;
   padding: 12px 24px;
@@ -96,7 +96,7 @@ html, body {
   border: 1px solid;
   cursor: pointer;
 }
-#main_area .buton:hover {
+#main_area .btn:hover {
   background-color: white;
   color: black;
 }
@@ -147,7 +147,7 @@ html, body {
   font-size: 20px;
   font-style: italic;
 }
-#men .card_list {
+#men .list {
   padding: 40px 0;
   display: flex;
   gap: 40px;
@@ -156,7 +156,7 @@ html, body {
   padding: 1px 0;
   font-size: 50px;
 }
-#men .mix {
+#men .content1 {
   display: flex;
   gap: 100px;
 }
@@ -183,7 +183,7 @@ html, body {
   font-size: 20px;
   font-style: italic;
 }
-#women .card_list {
+#women .list {
   padding: 40px 0;
   display: flex;
   gap: 40px;
@@ -192,7 +192,7 @@ html, body {
   padding: 1px 0;
   font-size: 50px;
 }
-#women .mix {
+#women .content1 {
   display: flex;
   gap: 100px;
 }
@@ -219,7 +219,7 @@ html, body {
   font-size: 20px;
   font-style: italic;
 }
-#kids .card_list {
+#kids .list {
   padding: 40px 0;
   display: flex;
   gap: 40px;
@@ -228,7 +228,7 @@ html, body {
   padding: 1px 0;
   font-size: 50px;
 }
-#kids .mix {
+#kids .content1 {
   display: flex;
   gap: 100px;
 }
@@ -281,29 +281,29 @@ html, body {
   background-color: black;
   color: white;
 }
-#product .row {
+#product .left {
   display: flex;
   gap: 40px;
 }
-#product .product_card {
+#product .product-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   padding: 0 140px;
 }
-#product .product_card img {
+#product .product-cards img {
   width: 200px;
   height: 200px;
 }
-#product .product_card .square {
+#product .product-cards .product-text {
   display: flex;
   gap: 20px;
 }
-#product .product_card .solid {
+#product .product-cards .explore {
   display: flex;
   gap: 20px;
 }
-#product .product_card .left {
+#product .product-cards .left {
   width: 200px;
   height: 200px;
   background-color: rgb(224, 224, 224);
@@ -311,55 +311,46 @@ html, body {
   padding: 80px 0;
   color: rgb(0, 0, 0);
 }
-#product .product_card .left h1 {
+#product .product-cards .left h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-#product .product_card .left p {
+#product .product-cards .left p {
   margin-top: 5px;
   opacity: 0.7;
   font-style: italic;
 }
 
-#social_area .social {
+#social_area .social-media {
   margin-left: 70px;
   margin-top: 150px;
 }
-#social_area .social .sosial_card {
-  display: flex;
-}
-#social_area .social .sosial_card img {
-  width: 100px;
-  height: 100px;
-}
-#social_area .social h1 {
+#social_area .social-media h1 {
   font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-#social_area .social p {
+#social_area .social-media p {
   font-size: 18px;
   margin-top: 5px;
+  opacity: 0.7;
   font-style: italic;
 }
-#social_area .social .social_cards {
-  padding: 60px 100px;
-}
 
-#form_area .row {
+#form_area .form-left {
   padding: 80px 70px;
   display: flex;
   gap: 40px;
 }
-#form_area .form_info {
+#form_area .info {
   display: flex;
   gap: 70px;
   margin-left: 60px;
 }
-#form_area .form_info .store h4 {
+#form_area .info .store h4 {
   margin-top: 10px;
   font-size: 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-#form_area .form_info .store p {
+#form_area .info .store p {
   font-size: 16px;
   margin-top: 10px;
   opacity: 0.7;
@@ -406,49 +397,53 @@ html, body {
 }
 
 #footer_area {
-  height: 490px;
+  height: 300px;
   background-color: black;
 }
 #footer_area .container {
   max-width: 1200px;
   margin: 0 auto;
-  height: 300px;
+  height: 100%;
 }
-#footer_area .footer {
+#footer_area .footer-main {
+  align-items: center;
   display: flex;
   gap: 140px;
-  align-items: center;
   color: white;
 }
-#footer_area .footer a {
+#footer_area .footer-main a {
   text-decoration: none;
   color: white;
   display: block;
   font-size: 18px;
   margin-top: 10px;
 }
-#footer_area .footer h4 {
+#footer_area .footer-main h4 {
   font-size: 20px;
 }
-#footer_area .footer .h4 {
+#footer_area .footer-main .h4 {
   margin-bottom: 30px;
 }
-#footer_area .footer img {
+#footer_area .footer-main img {
   color: rgb(255, 255, 255);
 }
-#footer_area .son {
+
+#son {
+  background-color: black;
+}
+#son .son {
   text-align: center;
   color: white;
   font-size: 18px;
 }
-#footer_area .son p {
+#son .son p {
   line-height: 35px;
 }
-#footer_area .son a {
+#son .son a {
   text-decoration: none;
   color: rgb(165, 222, 236);
 }
-#footer_area .son .icon {
+#son .son .icon {
   font-size: 30px;
   margin-top: 10px;
   display: flex;
@@ -456,162 +451,136 @@ html, body {
   gap: 20px;
 }
 
-@media screen and (max-width: 992px) {
-  #navbar_area .respo ul {
+@media screen and (max-width: 996px) {
+  #navbar_area .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  #navbar_area .responsive {
     display: none;
   }
   #navbar_area .burger {
     display: block;
   }
-  .nav {
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 40px;
-  }
   #main_area .container {
-    width: 100%;
     flex-direction: column;
+    align-items: center;
   }
-  #main_area .container .card_area {
+  .left {
+    flex: 1 1 100%;
+    height: auto;
+  }
+  .left img {
+    height: auto;
+  }
+  .card_area {
+    flex: 1 1 100%;
     flex-direction: column;
+    gap: 20px;
   }
-  #main_area .container .card img {
-    height: 700px;
+  .cards {
+    flex: 1 1 100%;
   }
-  #men {
+  .content1 {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .content {
+    text-align: center;
+    align-items: center;
+  }
+  #product .container {
     width: 100%;
+    margin-left: 0;
+    padding: 0 20px;
   }
-  #men h1, #men p {
+  #product .left {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  .product-text,
+  .explore {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .left {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+  }
+  #social_area .social-media {
+    margin-left: 0;
+    text-align: center;
+  }
+  #form_area .form-left {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .info {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+  }
+  .form {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .form input[type=text],
+  .form input[type=email] {
+    width: 100%;
+    text-align: center;
+  }
+  #footer_area {
+    height: auto;
+    text-align: center;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 0;
+  }
+  #men .container {
     text-align: center;
   }
   #men .card_list {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
   }
-  #women {
-    width: 100%;
+  #men .card_list .mix {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-  #women h1, #women p {
+  #women .container {
     text-align: center;
   }
-  #women .card_list {
+  #women .list {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
   }
-  #kids {
-    width: 100%;
-  }
-  #kids h1, #kids p {
-    text-align: center;
-  }
-  #kids .card_list {
+  #women .list .content1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
-  #product {
-    width: 100%;
-  }
-  #product .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #product .container {
-    text-align: center;
-    width: 500px;
-  }
-  #product .product_card {
-    display: flex;
-    flex-direction: column;
-  }
-  #product .square {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #product .square img {
-    width: 500px;
-    height: 500px;
-  }
-  #product .square .left {
-    width: 100%;
-    height: 100%;
-  }
-  #product .solid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #product .solid img {
-    width: 500px;
-    height: 500px;
-  }
-  #product .solid .left {
-    width: 100%;
-    height: 100%;
-  }
-  #social_area {
-    width: 100%;
-  }
-  #social_area .social {
-    text-align: center;
-  }
-  #social_area .social .social_cards {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  #form_area {
-    width: 100%;
-  }
-  #form_area .row {
-    display: flex;
-    flex-direction: column;
-  }
-  #form_area .row .form {
-    display: block;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  #form_area .row .form input[type=text] {
-    width: 100%;
-    height: 100%;
-  }
-  #form_area .row .form input[type=email] {
-    width: 100%;
-    height: 100%;
-  }
-  #form_area .row .form p {
-    text-align: center;
-  }
-  #footer_area {
-    height: 700px;
-    width: 100%;
-  }
-  #footer_area .footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    align-items: baseline;
-    padding: 30px 0;
-  }
-  #footer_area .footer a {
-    margin-top: 10px;
-  }
-  #footer_area .footer h4 {
-    margin-top: 20px;
-  }
-  #footer_area .son {
-    width: 100%;
-    align-items: end;
-  }
-  #footer_area .son .icon {
-    display: block;
-  }
+}
+#kids .container {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
