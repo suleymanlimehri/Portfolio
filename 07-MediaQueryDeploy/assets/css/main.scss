@@ -15,7 +15,7 @@ html,body{
         margin: 0 auto;
         height: 100%;
     }
-    .navbar{
+    .nav{
         align-items: center;
         display: flex;
         justify-content:space-between;
@@ -29,7 +29,7 @@ html,body{
         text-decoration: none;
         color: black;
     }
-    ul .list-link{
+    ul .home{
         color: gray;
     }
     .burger{
@@ -48,18 +48,18 @@ html,body{
     margin-bottom: 60px;
 }
 
-.left {
+.aside_bar {
     flex: 1 1 60%;
     position: relative;
     height: 500px;
 }
-.left img {
+.aside_bar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.content {
+.content1 {
     position: absolute;
     top: 0;
     left: 60px;
@@ -72,7 +72,7 @@ html,body{
     justify-content: center;
 }
 
-.content h1 {
+.content1 h1 {
     font-size: 55px;
     margin-bottom: 10px;
     
@@ -84,7 +84,7 @@ html,body{
     margin-bottom: 20px;
 }
 
-.btn {
+.buton {
     background: transparent;
     color: white;
     padding: 12px 24px;
@@ -156,7 +156,7 @@ html,body{
         font-size: 20px;
         font-style: italic;
     }
-    .list{
+    .card_list{
         padding: 40px 0;
         display: flex;
         gap: 40px;
@@ -165,7 +165,7 @@ html,body{
         padding: 1px 0;
         font-size: 50px;
     }
-    .content1{
+    .mix{
         display: flex;
         gap:100px;
     }
@@ -194,7 +194,7 @@ html,body{
         font-size: 20px;
         font-style: italic;
     }
-    .list{
+    .card_list{
         padding: 40px 0;
         display: flex;
         gap: 40px;
@@ -203,7 +203,7 @@ html,body{
         padding: 1px 0;
         font-size: 50px;
     }
-    .content1{
+    .mix{
         display: flex;
         gap:100px;
     }
@@ -232,7 +232,7 @@ html,body{
         font-size: 20px;
         font-style: italic;
     }
-    .list{
+    .card_list{
         padding: 40px 0;
         display: flex;
         gap: 40px;
@@ -241,7 +241,7 @@ html,body{
         padding: 1px 0;
         font-size: 50px;
     }
-    .content1{
+    .mix{
         display: flex;
         gap:100px;
     }
@@ -296,11 +296,11 @@ html,body{
         }
        }  
     }
-    .left{
+    .row{
         display: flex;
         gap: 40px;
     }
-    .product-cards{
+    .product_card{
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
@@ -310,11 +310,11 @@ html,body{
         height: 200px;
         
     }
-    .product-text{
+    .square{
         display: flex;
         gap: 20px;
     }
-    .explore{
+    .solid{
         display: flex;
         gap:20px
     }
@@ -333,7 +333,7 @@ html,body{
             opacity: 0.7;
             font-style: italic;}}}}
 #social_area{
-    .social-media{
+    .social{
         margin-left: 70px;
         margin-top: 150px;
         h1{
@@ -350,12 +350,12 @@ html,body{
     }
 }
 #form_area{
-   .form-left{
+   .row{
     padding: 80px 70px;
     display: flex;
     gap: 40px;
    }
-   .info{
+   .form_info{
     display: flex;
     gap: 70px;
     margin-left: 60px;
@@ -425,7 +425,7 @@ html,body{
         margin: 0 auto;
         height: 100%;
     }
-    .footer-main{
+    .footer{
         align-items: center;
         display: flex;
         gap: 140px;
@@ -474,7 +474,7 @@ html,body{
     max-width: 100%;
     padding: 0 15px;
     }
-    .responsive {
+    .respo {
         display: none;
         }
     .burger {
@@ -485,19 +485,19 @@ html,body{
         flex-direction: column;
         align-items: center;
     }
-        .left {
+        .aside_bar {
         flex: 1 1 100%;
         height: auto;}
-        .left img {
+        .aside_bar img {
         height: auto;
         }
         .card_area {
           flex: 1 1 100%;
           flex-direction: column;
           gap: 20px;}
-        .cards {
+        .card {
         flex: 1 1 100%;}
-        .content1 {
+        .mix {
          flex-direction: column;
          gap: 40px;}
             .content {
@@ -508,21 +508,21 @@ html,body{
                     margin-left: 0;
                     padding: 0 20px;
                 }
-                #product .left {
+                #product .row {
                     flex-direction: column;
                     align-items: center;
                 }
-                .product-card {
+                .product_card {
                     flex-direction: column;
                     padding: 0;
                     gap: 20px;
                 }
-                .product-card img {
+                .product_card img {
                     width: 100%;
                     height: auto;
                 }
-                .product-text,
-                .explore {
+                .square,
+                .solid {
                     flex-direction: column;
                     gap: 20px;
                 }
@@ -531,16 +531,16 @@ html,body{
                     height: auto;
                     padding: 40px 0;
                 }
-    #social_area .social-media {
+    #social_area .social {
                     margin-left: 0;
                     text-align: center;
                    }
-    #form_area .form-left {
+    #form_area .row {
                      flex-direction: column;
                     align-items: center;
                     padding: 40px 20px;
                 }
-     .info {
+     .form_info {
                     flex-direction: column;
                     gap: 30px;
                     text-align: center;
@@ -560,11 +560,18 @@ html,body{
                     height: auto;
                     text-align: center;
                 }
-                .footer-main {
+                .footer {
                     flex-direction: column;
                     gap: 30px;
                     align-items: center;
                     padding: 40px 0;
+                }
+                #end .son {
+                    text-align: center;
+                    padding: 20px;
+                }
+                #end .icon {
+                    justify-content: center;
                 }
                 #men{
                     .container{
@@ -586,12 +593,12 @@ html,body{
                     .container{
                         text-align: center;
                     }
-                    .list{
+                    .card_list{
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
                         align-items: center;
-                        .content1{
+                        .mix{
                             display: flex;
                             flex-direction: column;
                             gap: 10px;
