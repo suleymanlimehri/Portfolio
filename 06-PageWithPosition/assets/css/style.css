@@ -46,8 +46,8 @@ form span{
 }
 .sidebar{
     width: 900px;
-    margin-left: 0;
-    padding: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
 }
 input[type="search"]{
     width: 200px;
@@ -160,11 +160,6 @@ li{
     max-width: 1300px;
     background: white;
     border-radius: 5px;
-}
-.sidebar {
-    width: 250px;
-    padding-right: 20px;
-    border-right: 1px solid #ddd;
 }
 .product-listing{
     margin-left: 30px;
