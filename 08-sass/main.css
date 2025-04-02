@@ -17,7 +17,6 @@
 }
 #nav-area .logo {
   font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #nav-area .list {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -141,7 +140,7 @@
   color: white;
 }
 
-#footer {
+#footer1 {
   height: 40px;
   background-color: #212529;
   display: flex;
@@ -149,7 +148,7 @@
   justify-content: center;
 }
 
-#footer p {
+#footer1 p {
   text-align: center;
   color: white;
 }
