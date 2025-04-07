@@ -4,15 +4,19 @@
 // time=date.getHours()
 // if(time>5 && time<12){
 //     alert("Sabahın xeyir")
+//     console.log(time)
 // }
 // else if(time>12 && time<18){
 //     alert("günortan xeyir")
+//     console.log(time)
 // }
 // else if(time>18 && time<20){
 //     alert("axsamin xeyir")
+//     console.log(time)
 // }
 // else{
 //     alert("gecen xeyre qalsin")
+//     console.log(time)
 // }
 
 // 2.Object Destructing istifadə edərək employee  obyektindən name, 
@@ -59,7 +63,7 @@
 //     }
 //   ];
 // let { title, author, stats } = apiResponse[1];
-// console.log(`Meqale:${title},Muellif:${author} ${stats}`)
+// console.log(`Meqale:${title},Muellif:${author} ${stats[0]} oxunma,${stats[1]} bəyənmə,${stats[2]} şəhr`)
 // 1. Destructuring istifadə edərək ikinci məqalənin məlumatlarını çıxarın
 // 2. stats array-ini də destructuring edin (oxunma, bəyənmə, şərhlər)
 // 3. Aşağıdakı formatda nəticəni console-a çıxarın:
@@ -79,44 +83,46 @@
 //   Premium statusu (default: false)
 
 // function renderUserProfile(userData) { 
-// return{
-//     username: userData.user?.username ?? "Qonaq",
-//     profilepicture: userData.user?.profile?.avatar ?? "/default-avatar.png",
-//     bio: userData.user?.profile?.bio ?? "Məlumat yoxdur",
-//     contact:userData.user?.contact?.email??"təyin edilməyib",
-//     status:userData.user.account?.premium??false
-// }
-// }
-
-// // Test cases
-// console.log(renderUserProfile({
-//   user: {
-//     username: "mujgan",
-//     profile: {
-//       avatar: "/users/mujgan.jpg",
-//       bio: "JavaScript developer",
-//     },
-//     contact: {
-//       email: "mujgan@example.com"
-//     },
-//     account: {
-//       premium: true
+//     return{
+//         username:userData.user?.username??"Qonaq",
+//         profile:userData.user?.profile?.avatar??"/default-avatar.png",
+//         bio:userData.user?.profile?.bio??"Məlumat yoxdur",
+//         contact:userData.user?.contact?.email??"təyin edilməyib",
+//         account:userData.user?.account?.premium??false
 //     }
-//   }
-// }));
-
-// console.log(renderUserProfile({
-//   user: {
-//     username: "mehriban",
-//     profile: {
-//       bio: ""
-//     },
-//     contact: {}
-//   }
-// }));
-
-// console.log(renderUserProfile({
-//   user: {
-//     username: null
-//   }
-// }));
+//     }
+    
+//     // Test cases
+//     console.log(renderUserProfile({
+//       user: {
+//         username: "mujgan",
+//         profile: {
+//           avatar: "/users/mujgan.jpg",
+//           bio: "Qrafik Dizayner",
+//         },
+//         contact: {
+//           email: "mujgan@example.com"
+//         },
+//         account: {
+//           premium: true
+//         }
+//       }
+//     }));
+    
+//     console.log(renderUserProfile({
+//       user: {
+//         username: "mehriban",
+//         profile: {
+//           bio: ""
+//         },
+//         contact: {}
+//       }
+//     }));
+    
+    
+//     console.log(renderUserProfile({
+//       user: {
+//         username: null
+//       }
+//     }));
+//     console.log(renderUserProfile({}));
