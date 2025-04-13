@@ -253,147 +253,139 @@ let products = [
     },
 ]
 let currentUser;
+let users;
 document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
-  
-    currentUser = users.find((user) => user.isLogined == true); 
-    let usernameBtn = document.querySelector(".username");
-    usernameBtn.textContent = currentUser?.username || "Guest"; 
-  
+    let currentUser = users.find((user) => user.isLogined == true);
+    let loginBtn=document.querySelector(".daxilol")
     let login = document.querySelector(".login");
     let register = document.querySelector(".register");
     let logout = document.querySelector(".logout");
-  
-    function updateUserStatus() {
-      if (currentUser) {
+    let usernameBtn = document.querySelector(".username");
+
+
+    if (currentUser) {
         login.classList.add("d-none");
         register.classList.add("d-none");
         logout.classList.remove("d-none");
-  
-      } else {
+        usernameBtn.textContent=currentUser.username
+        loginBtn.textContent="Çıxış"
+
+        
+    } else {
         login.classList.remove("d-none");
         register.classList.remove("d-none");
         logout.classList.add("d-none");
-      }
-    };
-  
-    let logoutUser = () => {
-      if (currentUser) {
-        currentUser.isLogined = false;
-        currentUser.wishlist = [];
-        localStorage.setItem("users", JSON.stringify(users));
-        usernameBtn.textContent = "Guest";
-      }
-    };  
-  
-    updateUserStatus();
-  
-    logout.addEventListener("click", logoutUser);
-
-    function newcard() {
-        let cards = document.querySelector(".cards");
-        products.forEach(product => {
-            let card = document.createElement("div");
-            card.classList.add("card");
-    
-            let heartIcon = document.createElement("i");
-            heartIcon.classList.add("fa-regular", "fa-heart", "card-heart");
-            card.appendChild(heartIcon);
-    
-            heartIcon.addEventListener("click", function () {
-                toggleUsewishlist(product.id, heartIcon);
-            });
-    
-            let cardImage = document.createElement("div");
-            cardImage.classList.add("card-image");
-    
-            let img = document.createElement("img");
-            img.src = product.image;
-            cardImage.appendChild(img);
-    
-            let cardContent = document.createElement("div");
-            cardContent.classList.add("card-content");
-    
-            let cardTitle = document.createElement("h2");
-            cardTitle.classList.add("card-title");
-            cardTitle.textContent = `${product.title}`.slice(0, 20) + " . . .";
-    
-            let cardCategory = document.createElement("p");
-            cardCategory.classList.add("card-category");
-            cardCategory.textContent = product.category;
-    
-            let cardFooter = document.createElement("div");
-            cardFooter.classList.add("card-footer");
-    
-            let cardPrice = document.createElement("span");
-            cardPrice.classList.add("card-price");
-            cardPrice.textContent = `${product.price}`;
-    
-            let cardRating = document.createElement("div");
-            cardRating.classList.add("card-rating");
-    
-            let rate = document.createElement("span");
-            rate.textContent = `⭐ ${product.rating.rate}`;
-            let reviews = document.createElement("span");
-            reviews.textContent = (`${product.rating.count}`);
-            cardRating.append(rate, reviews);
-    
-            cardFooter.append(cardPrice, cardRating);
-            cardContent.append(cardTitle, cardCategory, cardFooter);
-            card.append(cardImage, cardContent);
-    
-            cards.append(card);
-        });
     }
-    
+
+    let logoutUser = () => {
+        currentUser.isLogined = false;
+        localStorage.setItem("users", JSON.stringify(users));
+        location.reload()
+    };
+
+    logout.addEventListener("click", logoutUser);
+});
+    function newcard(){
+        let cards=document.querySelector(".cards")
+     products.forEach(product => {
+        let card = document.createElement("div")
+        card.classList.add("card")
+
+        let heartIcon = document.createElement("i")
+        heartIcon.classList.add("fa-regular", "fa-heart","card-heart")
+        card.appendChild(heartIcon)
+
+
+        heartIcon.addEventListener("click", function () {
+            toggleUsewishlist(product.id, heartIcon);
+        });
+        
+        let cardImage = document.createElement("div")
+        cardImage.classList.add("card-image")
+
+
+        let img = document.createElement("img")
+        img.src = `${product.image}`
+
+        let cardContent = document.createElement("div")
+        cardContent.classList.add("card-content")
+
+        let cardTitle = document.createElement("h2")
+        cardTitle.classList.add("card-title")
+        cardTitle.textContent=`${product.title.slice(0,20)} . ..`
+
+        let cardCategory = document.createElement("p")
+        cardCategory.classList.add("card-category")
+        cardCategory.textContent=`${product.category}`
+
+        let cardFooter = document.createElement("div")
+        cardFooter.classList.add("card-footer")
+
+        let cardPrice = document.createElement("span")
+        cardPrice.classList.add("card-price")
+        cardPrice.textContent=`${product.price}`
+
+        let cardRating = document.createElement("div")
+        cardRating.classList.add("card-rating")
+
+        let rate = document.createElement("span")
+        rate.textContent=`${product.rating.rate}`
+        let reviews = document.createElement("span")
+
+        reviews.textContent=`${product.rating.count}`
+        cardRating.append(rate, reviews)
+        cardFooter.append(cardPrice, cardRating)
+        cardContent.append(cardTitle, cardCategory, cardFooter)
+        cardImage.append(img)
+        card.append(cardImage, cardContent)
+
+        cards.append(card)
+    });   
+    }
     newcard();
-    
-    function toggleUsewishlist(productId, heartIcon) {
+
+    function toggleUsewishlist(productId,heartIcon) {
         if (!currentUser) {
             toast("Please login to add wishlist");
             setTimeout(() => {
-                window.location.href="login.html"
-            }, 2000);
-            return; 
+                window.location.href = "login.html";
+            }, 3000);
+            
         } 
-        let userIndex = users.findIndex((user) => user.id == currentUser.id);
+        let userIndex=users.findIndex((user)=>user.id==currentUser.id)
 
-        if (userIndex === -1) {
-            console.log("User not found");
-            return; 
+        let currentProduct=currentUser.wishlist.some((item)=>item.id==productId)
+        if(currentProduct){
+            let currentProductIndex=currentUser.wishlist.findIndex((product)=>product.id==productId)
+            currentUser.wishlist.splice(currentProductIndex,1)
+            users[userIndex]=currentUser
+            localStorage.setItem("users",JSON.stringify(users))
+
+            heartIcon.classList.add("fa-regular")
+            heartIcon.classList.remove("fa-solid")
+            toast("product remove wishlist")
         }
+        else{
+            let addproduct=products.findIndex((product)=>product.id==productId)
+            currentUser.wishlist.push(addproduct)
+            users[userIndex]=currentUser
+            localStorage.setItem("users",JSON.stringify(users))
 
-        let currentProduct = currentUser.wishlist.some((item) => item.id == productId);
-        if (currentProduct) {
-            let currentProductIndex = currentUser.wishlist.findIndex((product) => product.id == productId);
-            currentUser.wishlist.splice(currentProductIndex, 1);
-            users[userIndex] = currentUser;
-            localStorage.setItem("users", JSON.stringify(users));
-
-            heartIcon.classList.add("fa-regular");
-            heartIcon.classList.remove("fa-solid");
-            toast("Product removed from wishlist");
-        } else {
-            let addProduct = products.find((product) => product.id == productId);
-            currentUser.wishlist.push(addProduct);
-            users[userIndex] = currentUser;
-            localStorage.setItem("users", JSON.stringify(users));
-
-            heartIcon.classList.remove("fa-regular");
-            heartIcon.classList.add("fa-solid");
-            toast("Product added to wishlist");
+            heartIcon.classList.remove("fa-regular")
+            heartIcon.classList.add("fa-solid")
+            toast("product add wishlist")
         }
     }
-
-    function toast(text) {
-        Toastify({
-            text:`${text}`,
-            duration: 3000,
-            position: "right",
-            stopOnFocus: true,
-            style: {
-                background: "linear-gradient(to right, #00b09b, #96c93d)",
-            },
-        }).showToast();
-    }
-});
+let toast = (text) => {
+    Toastify({
+        text: `${text}`,
+        duration: 3000,
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right,rgb(83, 253, 233),rgb(162, 255, 1))",
+        },
+        onClick: function () { }
+    }).showToast();
+}
