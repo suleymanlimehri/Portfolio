@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-        let response = await fetch("http://localhost:5000/products");
+        let response = await fetch("https://fakestoreapi.com/products");
         let products = await response.json();
         console.log(products);
 
