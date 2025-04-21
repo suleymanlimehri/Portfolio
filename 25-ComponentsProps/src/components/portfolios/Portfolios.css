@@ -1,0 +1,7 @@
+.portfolio-area{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1180px;
+    gap: 30px;
+    margin: 90px 90px;
+}
