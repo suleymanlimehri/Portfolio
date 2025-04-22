@@ -1,0 +1,38 @@
+.customer_area{
+    display: flex;
+    gap: 80px;
+    padding-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto ;  
+    justify-content: center;
+    align-items: center;
+}
+.customer{
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    width: 450px;
+    max-width: 1200px;
+    margin: 0 auto ;  
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    border: 1px solid #D2D2D2;
+}
+.title{
+    width: 350px;
+}
+.image{
+    font-size: 30px;
+    color:#0D6EFD ;
+}
+.name{
+    font-size: 15px;
+    color: grey;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

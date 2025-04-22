@@ -1,0 +1,19 @@
+.pays,.pays_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pays_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}

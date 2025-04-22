@@ -1,0 +1,30 @@
+.pay_card{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: aliceblue;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    height: 500px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.pay_name{
+    color: #6c757d;
+}
+.btn{
+    height: 40px;
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid #0D6EFD;
+    color:#0D6EFD;
+    font-size: 15px;
+}
+.pay_price{
+    display: flex;
+}

@@ -1,0 +1,39 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 40px;
+    padding: 60px 60px;
+    margin: 0 auto;
+
+}
+.input{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],.btn{
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.btn{
+   color: white;
+   background-color: #4D82CE;
+   border-radius: 5px;
+   border: none;
+   font-size: 17px;
+}
+textarea{
+    height: 90px;
+    width: 100%;
+}
+.content{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,32 @@
+.feature{
+    width: 350px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.icon{
+    font-size: 30px;
+    background-color: #297FFD;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    width: 60px;
+    height: 50px;
+}
+.desc{
+    width: 260px;
+    color: #212529;
+    font-family: 'Times New Roman', Times, serif;
+}
+.action{
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+    color: #346EFD;
+}
+.arrow{
+    font-size: 12px;
+    margin-top: 3px;
+}

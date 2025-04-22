@@ -1,0 +1,10 @@
+.link{
+    font-size: 17px;
+    text-decoration: none;
+    color: inherit;
+}
+.links{
+    display: flex;
+    gap: 30px; 
+    list-style: none;
+}
