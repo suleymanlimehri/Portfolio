@@ -1,0 +1,80 @@
+.count_area {
+    display: flex;
+    position: relative;
+    top: 50px;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    left: 50px;
+    width: 400px;
+    height: 400px;
+    background-color: #F7E6D2;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    gap: 10px;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #426469;
+}
+
+.paraqraf {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.button {
+    display: flex;
+    gap: 8px;
+}
+
+.increase {
+    width: 80px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: #CC6733;
+}
+
+input[type="text"] {
+    width: 40px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid #E5CBB2;
+    background-color: transparent;
+    height: 40px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.add {
+    width: 120px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: #427C8A;
+    padding: 5px;
+    font-size: 20px;
+}
