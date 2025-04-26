@@ -28,8 +28,6 @@ const Services = () => {
     <>  <div className='servicesContent'><h3 className="sertitle">SERVICES</h3>
         <em className='loremser'>Lorem ipsum dolor sit amet consectetur.</em></div>
     <div className='services-area'>
-      
-
       {
         services.map((service) => (
           <Service

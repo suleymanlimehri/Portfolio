@@ -116,7 +116,7 @@ let TodoList = () => {
                                 onClick={() => deleteItem(item.id)}
                                 className={style.deletebtn}
                                 disabled={!item.isChecked}
-                                style={{ cursor: !item.isChecked ? "not-allowed" : "pointer", opacity: !item.isChecked ? 0.5 : 1 }}>
+                               >
                                 <MdDelete />
                             </button>
                         </div>

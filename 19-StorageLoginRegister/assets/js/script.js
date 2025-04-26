@@ -252,131 +252,115 @@ let products = [
         }
     },
 ]
-let currentUser;
-let users;
-document.addEventListener("DOMContentLoaded", () => {
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-    let currentUser = users.find((user) => user.isLogined == true);
-    let loginBtn=document.querySelector(".daxilol")
-    let login = document.querySelector(".login");
-    let register = document.querySelector(".register");
-    let logout = document.querySelector(".logout");
-    let usernameBtn = document.querySelector(".username");
+let currentUser = null;
+let users = [];
 
+document.addEventListener("DOMContentLoaded", () => {
+    users = JSON.parse(localStorage.getItem("users")) || [];
+    currentUser = users.find((user) => user.isLogined === true) || null;
+
+    const loginBtn = document.querySelector(".daxilol");
+    const login = document.querySelector(".login");
+    const register = document.querySelector(".register");
+    const logout = document.querySelector(".logout");
+    const usernameBtn = document.querySelector(".username");
 
     if (currentUser) {
         login.classList.add("d-none");
         register.classList.add("d-none");
         logout.classList.remove("d-none");
-        usernameBtn.textContent=currentUser.username
-        loginBtn.textContent="Çıxış"
-
-        
+        usernameBtn.textContent = currentUser.username;
+        loginBtn.textContent = "Çıxış";
     } else {
         login.classList.remove("d-none");
         register.classList.remove("d-none");
         logout.classList.add("d-none");
     }
 
-    let logoutUser = () => {
-        currentUser.isLogined = false;
-        localStorage.setItem("users", JSON.stringify(users));
-        location.reload()
-    };
+    logout.addEventListener("click", () => {
+        const index = users.findIndex(user => user.username === currentUser?.username);
+        if (index !== -1) {
+            users[index].isLogined = false;
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+        location.reload();
+    });
 
-    logout.addEventListener("click", logoutUser);
+    renderCards(); // bu ən sonda çağırılır
 });
-    function newcard(){
-        let cards=document.querySelector(".cards")
-     products.forEach(product => {
-        let card = document.createElement("div")
-        card.classList.add("card")
 
-        let heartIcon = document.createElement("i")
-        heartIcon.classList.add("fa-regular", "fa-heart","card-heart")
-        card.appendChild(heartIcon)
+function renderCards() {
+    const cards = document.querySelector(".cards");
+    cards.innerHTML = "";
 
+    products.forEach(product => {
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-        heartIcon.addEventListener("click", function () {
-            toggleUsewishlist(product.id, heartIcon);
+        const heartIcon = document.createElement("i");
+        heartIcon.classList.add("fa-heart", "card-heart");
+
+        if (currentUser && currentUser.wishlist && currentUser.wishlist.includes(product.id)) {
+            heartIcon.classList.add("fa-solid");
+        } else {
+            heartIcon.classList.add("fa-regular");
+        }
+
+        heartIcon.addEventListener("click", () => {
+            if (!currentUser) {
+                alert("Zəhmət olmasa, öncə daxil olun.");
+                return;
+            }
+
+            toggleUserWishlist(product.id, heartIcon);
         });
-        
-        let cardImage = document.createElement("div")
-        cardImage.classList.add("card-image")
 
+        const cardImage = document.createElement("div");
+        cardImage.classList.add("card-image");
 
-        let img = document.createElement("img")
-        img.src = `${product.image}`
+        const img = document.createElement("img");
+        img.src = product.image;
+        cardImage.appendChild(img);
 
-        let cardContent = document.createElement("div")
-        cardContent.classList.add("card-content")
+        const title = document.createElement("h3");
+        title.textContent = product.title;
 
-        let cardTitle = document.createElement("h2")
-        cardTitle.classList.add("card-title")
-        cardTitle.textContent=`${product.title.slice(0,20)} . ..`
+        const price = document.createElement("p");
+        price.textContent = `$${product.price}`;
 
-        let cardCategory = document.createElement("p")
-        cardCategory.classList.add("card-category")
-        cardCategory.textContent=`${product.category}`
+        card.appendChild(heartIcon);
+        card.appendChild(cardImage);
+        card.appendChild(title);
+        card.appendChild(price);
 
-        let cardFooter = document.createElement("div")
-        cardFooter.classList.add("card-footer")
+        cards.appendChild(card);
+    });
+}
 
-        let cardPrice = document.createElement("span")
-        cardPrice.classList.add("card-price")
-        cardPrice.textContent=`${product.price}`
+function toggleUserWishlist(productId, icon) {
+    if (!currentUser) return;
 
-        let cardRating = document.createElement("div")
-        cardRating.classList.add("card-rating")
-
-        let rate = document.createElement("span")
-        rate.textContent=`${product.rating.rate}`
-        let reviews = document.createElement("span")
-
-        reviews.textContent=`${product.rating.count}`
-        cardRating.append(rate, reviews)
-        cardFooter.append(cardPrice, cardRating)
-        cardContent.append(cardTitle, cardCategory, cardFooter)
-        cardImage.append(img)
-        card.append(cardImage, cardContent)
-
-        cards.append(card)
-    });   
+    if (!currentUser.wishlist) {
+        currentUser.wishlist = [];
     }
-    newcard();
 
-    function toggleUsewishlist(productId,heartIcon) {
-        if (!currentUser) {
-            toast("Please login to add wishlist");
-            setTimeout(() => {
-                window.location.href = "login.html";
-            }, 3000);
-            
-        } 
-        let userIndex=users.findIndex((user)=>user.id==currentUser.id)
+    const isInWishlist = currentUser.wishlist.includes(productId);
 
-        let currentProduct=currentUser.wishlist.some((item)=>item.id==productId)
-        if(currentProduct){
-            let currentProductIndex=currentUser.wishlist.findIndex((product)=>product.id==productId)
-            currentUser.wishlist.splice(currentProductIndex,1)
-            users[userIndex]=currentUser
-            localStorage.setItem("users",JSON.stringify(users))
-
-            heartIcon.classList.add("fa-regular")
-            heartIcon.classList.remove("fa-solid")
-            toast("product remove wishlist")
-        }
-        else{
-            let addproduct=products.findIndex((product)=>product.id==productId)
-            currentUser.wishlist.push(addproduct)
-            users[userIndex]=currentUser
-            localStorage.setItem("users",JSON.stringify(users))
-
-            heartIcon.classList.remove("fa-regular")
-            heartIcon.classList.add("fa-solid")
-            toast("product add wishlist")
-        }
+    if (isInWishlist) {
+        currentUser.wishlist = currentUser.wishlist.filter(id => id !== productId);
+        icon.classList.replace("fa-solid", "fa-regular");
+    } else {
+        currentUser.wishlist.push(productId);
+        icon.classList.replace("fa-regular", "fa-solid");
     }
+
+    const index = users.findIndex(user => user.username === currentUser.username);
+    if (index !== -1) {
+        users[index] = currentUser;
+        localStorage.setItem("users", JSON.stringify(users));
+    }
+}
+
 let toast = (text) => {
     Toastify({
         text: `${text}`,

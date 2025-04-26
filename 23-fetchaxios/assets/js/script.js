@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async() => {
-    let products=(await axios ("http://localhost:5000/products")).data
+    let products=(await axios ("http://localhost:3001/products")).data
     console.log(products)
     let users = JSON.parse(localStorage.getItem("users")) || [];
     let currentUser = users.find((user) => user.isLogined == true); 
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async() => {
     let register = document.querySelector(".register");
     let logout = document.querySelector(".logout");
     let userBtn = document.querySelector(".username");
-    userBtn.textContent = currentUser?.username
 
     let logoutUserFunction = () => {
         currentUser.isLogined = false;
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async() => {
 
             let cardTitle = document.createElement("h2")
             cardTitle.classList.add("card-title")
-            cardTitle.textContent = `${product.title.slice(0, 20)}...`
+            cardTitle.textContent = `${product.title.slice(0, 40)}...`
 
             let cardCategory = document.createElement("p")
             cardCategory.classList.add("card-category")
