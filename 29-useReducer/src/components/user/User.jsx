@@ -2,8 +2,7 @@ import React, { useEffect, useReducer, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import styles from './User.module.css'; // <<== BURADA İMPORT EDİRİK
-
+import styles from './User.module.css'; 
 const User = () => {
   let [name, setName] = useState("");
   let [username, setUsername] = useState("");
@@ -34,13 +33,9 @@ const User = () => {
       case "delete-todo":
         let filtered = state.todos.filter((item) => item.id !== action.id);
         return { ...state, todos: filtered }
-      case "edit-todo":
-        let updatedTodos = state.todos.map((item) =>
-          item.id === action.id ? { ...item, name: action.name, username: action.username } : item
-        );
-        return { ...state, todos: updatedTodos }
-      default:
-        return state;
+        case "edit-todo":
+          let updateTodo=state.todos.map((item)=>item.id==action.id?{...item,name:action.name,username:action.username}:item)
+          return { ...state, todos: updateTodo }
     }
   }
 
@@ -52,46 +47,39 @@ const User = () => {
     localStorage.setItem("todos", JSON.stringify(state.todos));
   }, [state.todos]);
 
-  const handleEdit = (item) => {
-    setModal(true);
-    setEditName(item.name);
-    setEditUsername(item.username);
-    setEditId(item.id);
-  }
-
+let Edit=(item)=>{
+  setModal(true)
+  setEditName(item.name)
+  setEditUsername(item.username) 
+  setEditId(item.id) 
+}
   return (
     <div className={styles.container}>
-      {modal && (
-        <div className={styles.modalOverlay}>
-          <div className={styles.modalContent}>
-            <h2>Edit User</h2>
-            <input
-              type="text"
-              value={editName}
-              onChange={(e) => setEditName(e.target.value)}
-              placeholder="New Name"
-              className={styles.input}
-            />
-            <input
-              type="text"
-              value={editUsername}
-              onChange={(e) => setEditUsername(e.target.value)}
-              placeholder="New Username"
-              className={styles.input}
-            />
-            <button
-              onClick={() => {
-                dispatch({ type: "edit-todo", id: editId, name: editName, username: editUsername });
-                setModal(false);
-              }}
-              className={styles.modalButton}
-            >
-              Edit
-            </button>
-          </div>
-        </div>
+      {modal&& (
+              <div className={styles.modalOverlay}>
+              <div className={styles.input_area}>
+                <input
+                type="text"
+                value={editName}
+                onChange={(e)=>setEditName(e.target.value)}
+                placeholder="New Name"
+                className={styles.input}
+              />
+              <input
+                type="text"
+                value={editUsername}
+                onChange={(e)=>setEditUsername(e.target.value)}
+                placeholder="New Username"
+                className={styles.input}
+              /> 
+                <div className={styles.buttonGroup}>
+              <button onClick={()=>{dispatch({type:"edit-todo",  id: editId,name:editName,username:editUsername});setModal(false)}} className={styles.button}>
+                Edit
+              </button>
+            </div>
+            </div>
+            </div>
       )}
-
       <div className={styles.inputs}>
         <div className={styles.input_area}>
           <input
@@ -127,7 +115,7 @@ const User = () => {
                 style={{ color: "red" }}
               />
               <FaEdit
-                onClick={() => handleEdit(item)}
+                onClick={() => Edit(item)}
                 className={styles.icon}
                 style={{ color: "green" }}
               />
@@ -140,5 +128,4 @@ const User = () => {
     </div>
   );
 }
-
 export default User;
