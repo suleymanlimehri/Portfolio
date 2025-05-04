@@ -31,9 +31,9 @@ const DetailsPage = () => {
         <h2>{findProduct.title}</h2>
         <p>{findProduct.description}</p>
 
-        <div className='dectBtn'>
+        <div className='Btn-area'>
           <button
-            style={{ width: "40px", height: "40px", border: "none", borderRadius: "5px" ,backgroundColor:"#C8A2C8", color:"white"}}
+            className='dectBtn'
             onClick={() =>{
               dispatch(decrement(findProduct))
               toast.success(`${count } count decrement successfuly`)
