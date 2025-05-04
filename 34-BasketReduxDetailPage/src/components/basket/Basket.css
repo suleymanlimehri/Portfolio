@@ -1,0 +1,23 @@
+.count-area{
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+    padding: 20px 20px;
+    width: 150px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.minus,.plus{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: inherit;
+    cursor: pointer;
+    font-size: 25px;
+}
+.count :disabled{
+    cursor: not-allowed;
+}
