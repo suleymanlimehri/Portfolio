@@ -1,0 +1,39 @@
+{
+    "student": [
+        {
+            "id": 1,
+            "name": "Mehriban",
+            "surname": "Suleymanlı",
+            "age": 20,
+            "isStudent": true
+        },
+        {
+            "id": 2,
+            "name": "Aytac",
+            "surname": "Suleymanova",
+            "age": 22,
+            "isStudent": false
+        },
+        {
+            "id": 3,
+            "name": "Mehriss",
+            "surname": "Qemberov",
+            "age": 20,
+            "isStudent": false
+        },
+        {
+            "id": 4,
+            "name": "Gunay",
+            "surname": "Memmedova",
+            "age": 20,
+            "isStudent": false
+        },
+        {
+            "id": 1746546770349,
+            "name": "gulay",
+            "surname": "Mahmudov",
+            "age": 44,
+            "isStudent": true
+        }
+    ]
+}
