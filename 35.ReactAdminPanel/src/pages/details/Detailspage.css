@@ -1,0 +1,48 @@
+.cart{
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    border: none;
+    font-variant: unset;
+}
+.Btn{
+    background-color: #C8A2C8;
+    font-size: 17px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+.Btn-area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.detailimg{
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+.details{
+    display: flex;
+    max-width: 900px;
+    align-items: center;
+    margin: 100px auto;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:#fff ;
+    border-radius: 10px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1) ;
+}
+.dectBtn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color:#C8A2C8 ;
+    color: white;
+}
